@@ -3,846 +3,395 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risss Butik Flatshoes Wanita | Toko Sepatu Online Modern & Manajemen Stok</title>
+    <title>RISNAWATI.id | Toko Flatshoes Modern</title>
     <style>
-        /* --- Reset & Gaya Dasar (Aplikasi Mobile-First) --- */
-        * { 
-            box-sizing: border-box; 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
+        /* Reset & General Style */
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f7f7f7;
-            color: #4a3c31;
-            line-height: 1.5;
-            display: flex;
-            justify-content: center;
+            background-color: #f4f7f4;
+            color: #333;
+            line-height: 1.6;
         }
 
-        /* Container agar tampilan rapi di tengah layaknya aplikasi HP */
-        .mobile-layout {
-            width: 100%;
-            max-width: 500px;
-            background-color: #fdf6ee; /* Nuansa krem hangat */
-            min-height: 100vh;
-            box-shadow: 0 0 20px rgba(0,0,0,0.05);
-            padding-bottom: 80px; /* Jarak untuk bottom navbar */
-            position: relative;
-        }
-
-        /* --- 1. Header Area --- */
+        /* Header & Logo */
         header {
-            background-color: #fdf6ee;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .menu-toggle {
-            font-size: 24px;
-            cursor: pointer;
-            color: #382d24;
-        }
-        .brand-wrapper {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .logo-img {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            border: 1px dashed #c5b4a5;
-            background-color: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8px;
-            font-weight: bold;
-            color: #8c7662;
+            background-color: #ffffff;
             text-align: center;
-            line-height: 1.1;
+            padding: 40px 10px;
+            border-bottom: 3px solid #77966d;
+        }
+        .logo {
+            width: 180px;
+            height: auto;
+            margin-bottom: 10px;
         }
         .judul {
-            font-size: 22px;
-            font-weight: 700;
+            font-size: 42px;
+            font-weight: 800;
             margin: 0;
-            color: #382d24;
-            letter-spacing: -0.5px;
+            color: #5a7a4e;
+            letter-spacing: 2px;
         }
-        .cart-btn-top {
-            background-color: #ebdcd0;
-            border: none;
-            padding: 8px 14px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: #382d24;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 13px;
-            cursor: pointer;
+        .slogan {
+            font-size: 14px;
+            letter-spacing: 4px;
+            margin-top: 5px;
+            color: #888;
+            text-transform: uppercase;
         }
 
-        /* --- 2. Search & Filter Sticky --- */
-        .sticky-search-nav {
+        /* Navigation */
+        nav {
+            background-color: #77966d;
+            padding: 15px;
+            text-align: center;
             position: sticky;
             top: 0;
-            z-index: 100;
-            background-color: #fdf6ee;
-            padding: 5px 20px 15px 20px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        .search-box {
-            position: relative;
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
         }
-        .search-box input {
-            width: 100%;
-            padding: 12px 15px 12px 42px;
-            border: 1px solid #f1e4d8;
-            border-radius: 15px;
-            font-size: 14px;
-            background-color: #ffffff;
-            outline: none;
-        }
-        .search-box::before {
-            content: "🔍";
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 14px;
-            opacity: 0.5;
-        }
-        .filter-box {
-            margin-top: 10px;
-            display: flex;
-            gap: 10px;
-        }
-        .filter-box select {
-            flex: 1;
-            padding: 8px;
-            border: 1px solid #f1e4d8;
-            border-radius: 10px;
-            font-size: 12px;
-            background-color: #fff;
-            color: #4a3c31;
-            outline: none;
-        }
+        nav a:hover { color: #d1e2c4; }
 
-        /* --- 3. Banner Hero Bergelombang --- */
+        /* Banner */
         .banner {
-            margin: 15px 20px;
-            background-color: #d1bba7;
-            border-radius: 20px;
-            padding: 30px 20px 40px 20px;
-            text-align: center;
-            position: relative;
+            width: 100%;
+            height: 400px;
             overflow: hidden;
-            background-image: radial-gradient(circle at 50% 160%, #c3ab96 35%, transparent 36%),
-                              radial-gradient(circle at 0% 160%, #c3ab96 35%, transparent 36%),
-                              radial-gradient(circle at 100% 160%, #c3ab96 35%, transparent 36%);
-            background-size: 40px 60px;
-            background-repeat: repeat-x;
-            background-position: bottom;
         }
-        .badge-banner {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 12px;
-            color: #382d24;
-        }
-        .banner-text h2 { 
-            font-size: 14px; 
-            margin: 0; 
-            color: #382d24;
-            font-weight: 500;
-            line-height: 1.5;
+        .banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
-        /* --- 4. Alert Box Restock --- */
-        .info-restock {
-            margin: 15px 20px;
-            background: #fff6f0;
-            border: 1px dashed #ffd8be;
-            border-radius: 15px;
-            padding: 12px;
-            text-align: center;
-            font-size: 12px;
-            color: #b06530;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 6px;
-        }
-
-        /* --- 5. Grid Produk 2 Kolom --- */
+        /* Container */
         .container {
-            padding: 0 20px;
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
         }
+
+        /* Product Grid */
         .section-title {
-            font-size: 16px;
-            font-weight: 700;
-            margin: 20px 0 12px 2px;
-            color: #382d24;
+            text-align: center;
+            font-size: 32px;
+            margin: 50px 0 30px;
+            color: #4a6340;
         }
         .product-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 50px;
         }
         .produk-card {
             background: white;
-            border-radius: 20px;
-            padding: 10px;
-            box-shadow: 0 4px 12px rgba(165, 140, 115, 0.05);
-            border: 1px solid #f6ebe0;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            cursor: pointer;
+            border-radius: 15px;
+            width: 280px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
         }
+        .produk-card:hover { transform: translateY(-10px); }
         .produk-card img {
             width: 100%;
-            height: 150px;
+            height: 220px;
             object-fit: cover;
-            border-radius: 16px;
-            background-color: #f5f5f5;
-        }
-        .produk-card h3 { 
-            font-size: 13px; 
-            font-weight: 600;
-            margin: 10px 0 4px 2px; 
-            color: #382d24;
+            border-radius: 10px;
         }
         .price {
-            color: #b07043;
-            font-weight: 700;
-            font-size: 14px;
-            margin: 0 0 10px 2px;
-        }
-        .stok-badge {
-            font-size: 10px;
+            color: #77966d;
             font-weight: bold;
-            color: #7d6551;
-            background: #f4eae1;
-            padding: 2px 8px;
-            border-radius: 10px;
-            display: inline-block;
-            margin: 0 0 10px 2px;
+            font-size: 20px;
+            margin: 15px 0;
         }
-        .stok-habis {
-            background-color: #fceade;
-            color: #e07a5f;
+        .stok-info {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
         }
 
-        /* Pengatur Jumlah Kuantitas (- 0 +) */
-        .qty-control {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: #f5eae1;
-            border-radius: 12px;
-            padding: 3px;
-        }
-        .qty-btn {
+        /* Checkout & Payment Area */
+        .checkout-section {
             background: white;
-            border: none;
-            width: 26px;
-            height: 26px;
-            border-radius: 50%;
-            font-weight: bold;
-            font-size: 14px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 600px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-
-        /* --- 6. Fitur Box & Form Shopee Style --- */
-        .shopee-box {
-            background: white;
+        .cart-summary {
+            background: #f9fbf8;
             padding: 15px;
-            border-radius: 16px;
-            border: 1px solid #f6ebe0;
-            box-shadow: 0 4px 12px rgba(165, 140, 115, 0.05);
+            border-radius: 8px;
             margin-bottom: 20px;
-        }
-        .shopee-box h3 {
-            margin-top: 0;
-            font-size: 14px;
-            border-bottom: 1px solid #f6ebe0;
-            padding-bottom: 8px;
-            color: #382d24;
+            text-align: left;
+            border: 1px dashed #77966d;
         }
 
-        /* Tabel Keranjang Minimalis */
-        .cart-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 12px;
-        }
-        .cart-table td {
-            padding: 8px 4px;
-            border-bottom: 1px solid #fbf7f3;
-        }
-        .btn-delete {
-            background: none;
-            border: none;
-            color: #e07a5f;
-            font-weight: bold;
-            cursor: pointer;
-        }
-
-        /* Form Pengaturan */
-        .form-group {
-            margin-bottom: 12px;
-        }
-        .form-group label {
-            display: block;
-            font-size: 12px;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-        .form-group input, .form-group select, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ebdcd0;
-            border-radius: 10px;
-            font-size: 12px;
-            background-color: #fffcf9;
-            outline: none;
-        }
-
-        /* Metode Pembayaran Badge Pilihan (Shopee Style) */
-        .payment-options {
+        /* Contact Section */
+        .info-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            margin-top: 5px;
+            gap: 40px;
+            margin-top: 40px;
         }
-        .payment-card {
-            border: 1px solid #ebdcd0;
-            padding: 10px;
-            border-radius: 10px;
-            text-align: center;
-            font-size: 12px;
-            cursor: pointer;
-            background: #fffcf9;
-            font-weight: 600;
+        .contact-container {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
-        .payment-card.active {
-            border-color: #d08453;
-            background-color: #fff6f0;
-            color: #b06530;
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
         }
 
-        /* Tombol Utama */
-        .btn-shopee {
-            background-color: #bd9a7a;
+        /* Button */
+        .button {
+            background-color: #77966d;
             color: white;
-            padding: 12px;
+            padding: 12px 25px;
             border: none;
-            border-radius: 15px;
+            border-radius: 30px;
             cursor: pointer;
             font-weight: bold;
-            font-size: 13px;
-            width: 100%;
-            text-align: center;
-            transition: 0.2s;
-        }
-        .btn-shopee:hover { background-color: #a48163; }
-        .btn-orange { background-color: #d08453; }
-        .btn-orange:hover { background-color: #b87041; }
-
-        /* --- 7. Bottom Navigation Menu --- */
-        .bottom-nav {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            max-width: 500px;
-            background-color: #ffffff;
-            border-top: 1px solid #ebdcd0;
-            display: flex;
-            justify-content: space-around;
-            padding: 10px 0;
-            z-index: 999;
-        }
-        .nav-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 11px;
-            color: #8c7662;
             text-decoration: none;
-            cursor: pointer;
-            font-weight: 500;
+            display: inline-block;
+            transition: 0.3s;
+            margin: 5px;
         }
-        .nav-item.active { color: #d08453; }
-        .nav-icon { font-size: 18px; margin-bottom: 2px; }
+        .button:hover { background-color: #5a7a4e; }
+        .btn-secondary { background-color: #888; }
+        .btn-secondary:hover { background-color: #666; }
 
-        /* Modal Pop Up */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            background: white;
-            padding: 20px;
-            border-radius: 20px;
-            max-width: 380px;
-            width: 90%;
-            position: relative;
+        footer {
+            background-color: #333;
+            color: white;
             text-align: center;
-        }
-        .modal-content img {
-            width: 100%; height: 200px; object-fit: cover; border-radius: 14px;
-        }
-        .close-modal {
-            position: absolute;
-            top: 10px; right: 15px;
-            font-size: 22px; cursor: pointer;
-            color: #aaa;
+            padding: 40px;
+            margin-top: 60px;
         }
     </style>
 </head>
 <body>
 
-    <div class="mobile-layout">
+    <header>
+        <img src="logo-risnawati.png" alt="Logo RISNAWATI" class="logo">
+        <h1 class="judul">RISNAWATI</h1>
+        <p class="slogan">TUNJUKKAN GAYAMU DISINI!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#produk">Produk</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <section class="banner" id="home">
+        <img src="banner.jpeg" alt="Banner Fashion">
+    </section>
+
+    <div class="container">
         
-        <header>
-            <div class="menu-toggle">☰</div>
-            <div class="brand-wrapper">
-                <div class="logo-img">FLAT<br>SHOES</div>
-                <h1 class="judul">Rissss Butik Flatshoes Wanita</h1>
-            </div>
-            <div class="cart-btn-top" onclick="bukaHalaman('keranjang-section')">
-                🛍️ <span id="cartCount">0</span>
-            </div>
-        </header>
+        <h2 class="section-title" id="produk">Koleksi Terpopuler</h2>
+        <div class="product-grid" id="productGrid"></div>
 
-        <div class="sticky-search-nav">
-            <div class="search-box">
-                <input type="text" id="searchInput" placeholder="Cari flatshoes idamanmu..." onkeyup="filterProduk()">
-            </div>
-            <div class="filter-box">
-                <select id="categoryFilter" onchange="filterProduk()">
-                    <option value="all">Semua Kategori</option>
-                    <option value="casual">Casual</option>
-                    <option value="pesta">Pesta / Formal</option>
-                    <option value="kerja">Kerja / Kuliah</option>
-                </select>
-                <select id="priceFilter" onchange="filterProduk()">
-                    <option value="all">Semua Harga</option>
-                    <option value="low">Di bawah Rp100.000</option>
-                    <option value="high">Rp100.000 ke atas</option>
-                </select>
-            </div>
-        </div>
-
-        <div id="halaman-beranda" class="halaman-item">
-            <section class="banner">
-                <div class="badge-banner">✦ simple • effortless • elegant ✦</div>
-                <div class="banner-text">
-                   <h2>Desainnya Simpel,<br>Nyamannya Maksimal.<br>Sempurna untuk gaya casual look yang effortless</h2>
-                </div>
-            </section>
-
-            <div class="info-restock">
-                <span>🔄</span> Koleksi Baru Saja Di-restok! Amankan flatshoesmu ✨
-            </div>
-
-            <div class="container">
-                <h2 class="section-title">Katalog Flatshoes Terupdate</h2>
-                <div class="product-grid" id="productGridContainer"></div>
-            </div>
-        </div>
-
-        <div id="halaman-keranjang" class="halaman-item" style="display: none; padding: 0 20px;">
-            <h2 class="section-title">🛒 Keranjang Belanja</h2>
+        <div class="checkout-section">
+            <h3>Keranjang Belanja & Pembayaran</h3>
             
-            <div class="shopee-box">
-                <h3>Rincian Item</h3>
-                <div id="cartEmptyMessage" style="font-size: 12px; color:#a39081; padding: 10px 0;">Keranjang belanja Anda masih kosong.</div>
-                <table class="cart-table" id="cartTable" style="display: none;">
-                    <tbody id="cartItemsContainer"></tbody>
-                </table>
-                <h4 style="text-align: right; margin: 15px 0 0; font-size: 14px;">Total Pesanan: <span id="cartTotalPrice" style="color:#b07043;">Rp0</span></h4>
+            <div class="cart-summary">
+                <strong>Isi Keranjang:</strong>
+                <div id="cartItems">Keranjang masih kosong.</div>
+                <hr style="border: 0; border-top: 1px solid #ddd; margin: 10px 0;">
+                <strong>Total Tagihan: <span id="cartTotal">Rp 0</span></strong>
             </div>
 
-            <div class="shopee-box">
-                <h3>📝 Pengiriman & Pembayaran</h3>
-                <form id="checkoutForm" onsubmit="prosesCheckout(event)">
-                    <div class="form-group">
-                        <label>Nama Penerima</label>
-                        <input type="text" id="checkoutNama" required placeholder="Masukkan nama lengkap">
-                    </div>
-                    <div class="form-group">
-                        <label>Alamat Lengkap</label>
-                        <textarea id="checkoutAlamat" rows="2" required placeholder="Nama jalan, nomor rumah, kota"></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>Opsi Pengiriman</label>
-                        <select id="checkoutKurir" required>
-                            <option value="J&T Express">J&T Express (Bisa COD)</option>
-                            <option value="JNE Regular">JNE Regular</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>Metode Pembayaran</label>
-                        <div class="payment-options">
-                            <div class="payment-card active" id="pay-cod" onclick="pilihMetodePembayaran('COD')">📦 COD (Bayar di Tempat)</div>
-                            <div class="payment-card" id="pay-transfer" onclick="pilihMetodePembayaran('Transfer')">🏦 Transfer Bank</div>
-                        </div>
-                    </div>
-                    <button type="submit" class="btn-shopee btn-orange" style="margin-top: 10px;">Buat Pesanan Sekarang</button>
-                </form>
-            </div>
+            <p><strong>Pilih Metode Pembayaran:</strong> (<span id="paymentStatus">COD</span>)</p>
+            <button class="button" onclick="pilihBayar('COD')">COD</button>
+            <button class="button" onclick="pilihBayar('BNI')">Transfer BNI</button>
+            <button class="button" onclick="pilihBayar('DANA')">DANA</button>
+
+            <br><br>
+            <button class="button" style="background:#333; width: 100%; max-width: 300px;" onclick="checkout()">
+                Checkout Sekarang
+            </button>
         </div>
 
-        <div id="halaman-gudang" class="halaman-item" style="display: none; padding: 0 20px;">
-            <h2 class="section-title">⚙️ Panel Manajemen Gudang (Restock)</h2>
-            <div class="shopee-box">
-                <h3>Tambah Pasokan Stok</h3>
-                <form id="restockForm" onsubmit="prosesRestock(event)">
-                    <div class="form-group">
-                        <label>Pilih Produk</label>
-                        <select id="restockProductSelect" required></select>
-                    </div>
-                    <div class="form-group">
-                        <label>Jumlah Tambahan Unit</label>
-                        <input type="number" id="restockJumlah" min="1" required placeholder="Contoh: 20">
-                    </div>
-                    <button type="submit" class="btn-shopee">Konfirmasi Tambah Stok</button>
-                </form>
-            </div>
-        </div>
-
-        <div class="bottom-nav">
-            <div class="nav-item active" id="nav-beranda" onclick="bukaHalaman('beranda-section')">
-                <div class="nav-icon">🏪</div>
-                <div>Beranda</div>
-            </div>
-            <div class="nav-item" id="nav-keranjang" onclick="bukaHalaman('keranjang-section')">
-                <div class="nav-icon">🛒</div>
-                <div>Keranjang</div>
-            </div>
-            <div class="nav-item" id="nav-gudang" onclick="bukaHalaman('gudang-section')">
-                <div class="nav-icon">⚙️</div>
-                <div>Restock</div>
+        <div class="about-box" id="tentang">
+            <h2 style="text-align: center; color: #4a6340;">Tentang Kami</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+                RISNAWATI.id hadir untuk memenuhi kebutuhan fashion alas kaki wanita yang mengedepankan kualitas, kenyamanan, dan harga yang terjangkau.
+            </p>
+            
+            <div class="info-wrapper">
+                <div class="contact-container" id="kontak">
+                    <h2 style="margin-top: 0; color: #4a6340;">Hubungi Kami</h2>
+                    <p>📍 Lokasi: Jl. Tangkuban Perahu No. 23</p>
+                    <p>📞 WhatsApp: +62 82128359084</p>
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Pesan berhasil terkirim!');">
+                        <input type="text" placeholder="Nama Anda" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Pesan Anda..." rows="4" required></textarea>
+                        <button type="submit" class="button" style="width: 100%; margin: 10px 0 0 0;">Kirim Pesan</button>
+                    </form>
+                </div>
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <img src="logo-risnawati.png" alt="Branding" style="width: 80%; opacity: 0.2;">
+                </div>
             </div>
         </div>
 
     </div>
 
-    <div class="modal" id="productModal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="tutupModal()">&times;</span>
-            <img src="" id="modalImg" alt="Detail Image">
-            <h3 id="modalTitle" style="margin: 12px 0 4px; font-size: 15px;"></h3>
-            <p id="modalPrice" style="font-weight: bold; color: #b07043; font-size: 15px; margin: 5px 0;"></p>
-            <p id="modalStok" style="font-size: 12px; font-weight: bold; margin-bottom: 15px; color:#8c7662;"></p>
-            <button id="modalAddToCartBtn" class="btn-shopee btn-orange">Tambah Ke Keranjang</button>
-        </div>
-    </div>
+    <footer>
+        <p>&copy; 2026 RISNAWATI.id - All Rights Reserved.</p>
+    </footer>
 
     <script>
-        // Database internal produk (Sudah Diperbaiki Struktur & Data Gambarnya)
-        let dataProduk = [
-let dataProduk = [
-    {
-        id: 1,
-        nama: "Flatshoes Casual - Pita",
-        kategori: "casual",
-        harga: 58000,
-        stok: 12,
-        <img src="gambar1.jpag" alt="Flatshoes Pita">
-    },
-    {
-        id: 2,
-        nama: "Flatshoes Casual - Putih",
-        kategori: "casual",
-        harga: 97000,
-        stok: 6,
-        <img src="gambar2.jpeg" alt="Flatshoes Putih">
-    },
-    {
-        id: 3,
-        nama: "Flatshoes Kerja - Hitam",
-        kategori: "kerja",
-        harga: 100000,
-        stok: 10,
-        gambar: "gambar3.jpeg"
-    }
-];
+        // Data master produk
+        let produk = [
+            { id: 1, nama: "Flatshoes Pita", harga: 58000, stok: 10, gambar: "gambar1.jpeg" },
+            { id: 2, nama: "Flatshoes Putih", harga: 97000, stok: 5, gambar: "gambar2.jpg" },
+            { id: 3, nama: "Flatshoes Hitam", harga: 100000, stok: 8, gambar: "gambar3.jpg" }
         ];
 
-        let keranjang = [];
-        let metodeTerpilih = "COD";
+        let cart = [];
+        let metodeBayar = "COD";
 
-        // Navigasi Antar Halaman Aplikasi
-        function bukaHalaman(sectionName) {
-            document.getElementById('halaman-beranda').style.display = 'none';
-            document.getElementById('halaman-keranjang').style.display = 'none';
-            document.getElementById('halaman-gudang').style.display = 'none';
-            
-            document.getElementById('nav-beranda').classList.remove('active');
-            document.getElementById('nav-keranjang').classList.remove('active');
-            document.getElementById('nav-gudang').classList.remove('active');
+        // Tampilkan produk ke HTML
+        function renderProduk() {
+            let container = document.getElementById("productGrid");
+            container.innerHTML = "";
 
-            if (sectionName === 'beranda-section') {
-                document.getElementById('halaman-beranda').style.display = 'block';
-                document.getElementById('nav-beranda').classList.add('active');
-            } else if (sectionName === 'keranjang-section') {
-                document.getElementById('halaman-keranjang').style.display = 'block';
-                document.getElementById('nav-keranjang').classList.add('active');
-            } else if (sectionName === 'gudang-section') {
-                document.getElementById('halaman-gudang').style.display = 'block';
-                document.getElementById('nav-gudang').classList.add('active');
-            }
-            window.scrollTo(0,0);
-        }
-
-        // Render Katalog Tampilan
-        function renderKatalog(produkData) {
-            const container = document.getElementById('productGridContainer');
-            container.innerHTML = '';
-
-            produkData.forEach(p => {
-                const itemKeranjang = keranjang.find(item => item.id === p.id);
-                const qty = itemKeranjang ? itemKeranjang.jumlah : 0;
-                const isHabis = p.stok === 0;
-
-                const card = document.createElement('div');
-                card.className = 'produk-card';
-                card.innerHTML = `
-                    <div onclick="bukaModal(${p.id})">
-                        <img src="${p.gambar}" alt="${p.nama}">
-                        <h3>${p.nama}</h3>
-                        <div class="price">Rp ${p.harga.toLocaleString('id-ID')}</div>
-                    </div>
-                    <div>
-                        <div class="stok-badge ${isHabis ? 'stok-habis' : ''}">
-                            ${isHabis ? 'Habis' : 'Stok: ' + p.stok}
-                        </div>
-                        <div class="qty-control">
-                            <button class="qty-btn" onclick="event.stopPropagation(); ubahKuantitas(${p.id}, -1)">-</button>
-                            <span style="font-weight:bold; font-size:13px;">${qty}</span>
-                            <button class="qty-btn" onclick="event.stopPropagation(); ubahKuantitas(${p.id}, 1)" ${isHabis ? 'disabled' : ''}>+</button>
-                        </div>
-                    </div>
+            produk.forEach(p => {
+                container.innerHTML += `
+                <div class="produk-card">
+                    <img src="${p.gambar}" alt="${p.nama}">
+                    <h3>${p.nama}</h3>
+                    <p class="price">Rp ${p.harga.toLocaleString('id-ID')}</p>
+                    <p class="stok-info">Stok Tersedia: <strong>${p.stok}</strong></p>
+                    
+                    <button class="button" onclick="tambahCart(${p.id})">Beli Sekarang</button>
+                    <button class="button btn-secondary" style="font-size:12px; padding: 5px 15px;" onclick="restock(${p.id})">Restock +1</button>
+                </div>
                 `;
-                container.appendChild(card);
             });
-            updateOpsiPilihanRestock();
+            
+            updateCartSummary();
         }
 
-        // Filter Pencarian & Kategori
-        function filterProduk() {
-            const keyword = document.getElementById('searchInput').value.toLowerCase();
-            const kategori = document.getElementById('categoryFilter').value;
-            const harga = document.getElementById('priceFilter').value;
+        // Tambah produk ke keranjang belanja
+        function tambahCart(id) {
+            let item = produk.find(p => p.id === id);
 
-            let hasil = dataProduk.filter(p => p.nama.toLowerCase().includes(keyword));
-            if (kategori !== 'all') hasil = hasil.filter(p => p.kategori === kategori);
-            if (harga !== 'all') {
-                if (harga === 'low') hasil = hasil.filter(p => p.harga < 100000);
-                else hasil = hasil.filter(p => p.harga >= 100000);
-            }
-            renderKatalog(hasil);
-        }
-
-        // Fungsi Penambahan/Pengurangan Kuantitas Item
-        function ubahKuantitas(id, perubahan) {
-            const produk = dataProduk.find(p => p.id === id);
-            const itemIndex = keranjang.findIndex(item => item.id === id);
-
-            if (itemIndex > -1) {
-                const item = keranjang[itemIndex];
-                if (perubahan === 1 && item.jumlah < produk.stok) {
-                    item.jumlah++;
-                } else if (perubahan === -1) {
-                    item.jumlah--;
-                    if (item.jumlah === 0) keranjang.splice(itemIndex, 1);
+            if (item.stok > 0) {
+                item.stok--;
+                
+                // Cari tahu apakah barang sudah pernah dimasukkan ke keranjang sebelumnya
+                let itemDiCart = cart.find(c => c.id === id);
+                if (itemDiCart) {
+                    itemDiCart.jumlah++;
+                } else {
+                    cart.push({ id: item.id, nama: item.nama, harga: item.harga, jumlah: 1 });
                 }
-            } else if (perubahan === 1 && produk.stok > 0) {
-                keranjang.push({ id: produk.id, nama: produk.nama, harga: produk.harga, jumlah: 1 });
+                
+                renderProduk();
+                alert(`${item.nama} berhasil dimasukkan ke keranjang!`);
+            } else {
+                alert("Maaf, stok produk ini telah habis!");
             }
-
-            updateSistemKeranjang();
-            filterProduk();
         }
 
-        // Sinkronisasi Data Tampilan Keranjang
-        function updateSistemKeranjang() {
-            const totalItem = keranjang.reduce((sum, item) => sum + item.jumlah, 0);
-            document.getElementById('cartCount').innerText = totalItem;
+        // Menambah stok produk (fitur admin)
+        function restock(id) {
+            let item = produk.find(p => p.id === id);
+            item.stok++;
+            renderProduk();
+        }
 
-            const emptyMsg = document.getElementById('cartEmptyMessage');
-            const table = document.getElementById('cartTable');
-            const container = document.getElementById('cartItemsContainer');
+        // Perbarui tampilan ringkasan belanja di bawah grid produk
+        function updateCartSummary() {
+            let cartItemsDiv = document.getElementById("cartItems");
+            let cartTotalSpan = document.getElementById("cartTotal");
 
-            if (keranjang.length === 0) {
-                emptyMsg.style.display = 'block';
-                table.style.display = 'none';
-                document.getElementById('cartTotalPrice').innerText = "Rp0";
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = "Keranjang masih kosong.";
+                cartTotalSpan.innerText = "Rp 0";
                 return;
             }
 
-            emptyMsg.style.display = 'none';
-            table.style.display = 'table';
-            container.innerHTML = '';
-
-            let totalBelanja = 0;
-            keranjang.forEach(item => {
-                const subtotal = item.harga * item.jumlah;
-                totalBelanja += subtotal;
-
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td><b>${item.nama}</b><br><span style="color:#b07043">Rp ${item.harga.toLocaleString('id-ID')} x ${item.jumlah}</span></td>
-                    <td style="text-align:right; font-weight:700;">Rp ${subtotal.toLocaleString('id-ID')}</td>
-                    <td style="text-align:right; width:30px;"><button class="btn-delete" onclick="ubahKuantitas(${item.id}, -${item.jumlah})">❌</button></td>
-                `;
-                container.appendChild(tr);
-            });
-
-            document.getElementById('cartTotalPrice').innerText = "Rp " + totalBelanja.toLocaleString('id-ID');
-        }
-
-        // Pilihan Pembayaran Shopee Style
-        function pilihMetodePembayaran(metode) {
-            metodeTerpilih = metode;
-            document.getElementById('pay-cod').classList.remove('active');
-            document.getElementById('pay-transfer').classList.remove('active');
-
-            if (metode === 'COD') {
-                document.getElementById('pay-cod').classList.add('active');
-            } else {
-                document.getElementById('pay-transfer').classList.add('active');
-            }
-        }
-
-        // Alur Checkout Pesanan
-        function prosesCheckout(e) {
-            e.preventDefault();
-            if (keranjang.length === 0) {
-                alert("⚠️ Keranjang belanja Anda masih kosong!");
-                return;
-            }
-
-            // Kurangi Stok asli di gudang
-            keranjang.forEach(item => {
-                const produk = dataProduk.find(p => p.id === item.id);
-                if (produk) produk.stok -= item.jumlah;
-            });
-
-            const nama = document.getElementById('checkoutNama').value;
-            const alamat = document.getElementById('checkoutAlamat').value;
-            const kurir = document.getElementById('checkoutKurir').value;
-
-            let pesanSukses = `🎉 PESANAN BERHASIL (Shopee System Style) 🎉\n\n` +
-                              `Penerima: ${nama}\n` +
-                              `Alamat: ${alamat}\n` +
-                              `Pengiriman: ${kurir}\n` +
-                              `Metode Bayar: ${metodeTerpilih}\n\n`;
-
-            if (metodeTerpilih === "COD") {
-                pesanSukses += `Silakan siapkan uang tunai saat kurir datang mengantarkan paket Anda.`;
-            } else {
-                pesanSukses += `Silakan lakukan transfer ke salah satu rekening berikut:\n` +
-                               `- Bank BCA: 123-4567-890 a/n Risnawati\n` +
-                               `- Bank BNI: 987-6543-210 a/n Risnawati`;
-            }
-
-            alert(pesanSukses);
-
-            // Reset Aplikasi
-            keranjang = [];
-            updateSistemKeranjang();
-            filterProduk();
-            document.getElementById('checkoutForm').reset();
-            bukaHalaman('beranda-section');
-        }
-
-        // Fitur Sinkronisasi Restock Gudang
-        function updateOpsiPilihanRestock() {
-            const select = document.getElementById('restockProductSelect');
-            if (!select) return;
-            const savedIndex = select.selectedIndex;
-            select.innerHTML = '';
-            dataProduk.forEach(p => {
-                const opt = document.createElement('option');
-                opt.value = p.id;
-                opt.innerText = `${p.nama} (Sisa: ${p.stok})`;
-                select.appendChild(opt);
-            });
-            if (savedIndex >= 0 && savedIndex < select.options.length) {
-                select.selectedIndex = savedIndex;
-            }
-        }
-
-        function prosesRestock(e) {
-            e.preventDefault();
-            const id = parseInt(document.getElementById('restockProductSelect').value);
-            const jumlah = parseInt(document.getElementById('restockJumlah').value);
-
-            const produk = dataProduk.find(p => p.id === id);
-            if (produk) {
-                produk.stok += jumlah;
-                alert(`✅ Berhasil Menambah Pasokan! Produk "${produk.nama}" kini bertambah ${jumlah} unit di gudang.`);
-                filterProduk();
-                document.getElementById('restockForm').reset();
-            }
-        }
-
-        // Modal Fungsi Detail Pop Up
-        function bukaModal(id) {
-            const p = dataProduk.find(prod => prod.id === id);
-            if (!p) return;
-
-            document.getElementById('modalImg').src = p.gambar;
-            document.getElementById('modalTitle').innerText = p.nama;
-            document.getElementById('modalPrice').innerText = "Rp " + p.harga.toLocaleString('id-ID');
-            document.getElementById('modalStok').innerText = p.stok > 0 ? `Tersedia: ${p.stok} unit` : "Stok Habis";
+            let html = "<ul style='padding-left:20px; margin:5px 0;'>";
+            let total = 0;
             
-            const btn = document.getElementById('modalAddToCartBtn');
-            if (p.stok === 0) {
-                btn.disabled = true;
-                btn.innerText = "Stok Habis";
-            } else {
-                btn.disabled = false;
-                btn.innerText = "Tambah Ke Keranjang";
-                btn.onclick = function() {
-                    ubahKuantitas(p.id, 1);
-                    tutupModal();
-                };
+            cart.forEach(item => {
+                let subtotal = item.harga * item.jumlah;
+                total += subtotal;
+                html += `<li>${item.nama} x ${item.jumlah} - Rp ${subtotal.toLocaleString('id-ID')}</li>`;
+            });
+            
+            html += "</ul>";
+            cartItemsDiv.innerHTML = html;
+            cartTotalSpan.innerText = "Rp " + total.toLocaleString('id-ID');
+        }
+
+        // Ganti metode pembayaran
+        function pilihBayar(metode) {
+            metodeBayar = metode;
+            document.getElementById("paymentStatus").innerText = metode;
+            alert("Metode pembayaran diubah menjadi: " + metode);
+        }
+
+        // Fungsi Checkout Akhir
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Keranjang belanja Anda masih kosong!");
+                return;
             }
-            document.getElementById('productModal').style.display = 'flex';
+
+            let total = cart.reduce((sum, item) => sum + (item.harga * item.jumlah), 0);
+            let pesan = "--- NOTA PEMBELIAN RISNAWATI.id ---\n\n";
+            
+            cart.forEach(item => {
+                pesan += `${item.nama} (${item.jumlah}x) : Rp ${(item.harga * item.jumlah).toLocaleString('id-ID')}\n`;
+            });
+            
+            pesan += `\nTOTAL TAGIHAN: Rp ${total.toLocaleString('id-ID')}\n`;
+            pesan += `METODE BAYAR: `;
+
+            if (metodeBayar === "COD") {
+                pesan += "Bayar di Tempat (COD)";
+            } else if (metodeBayar === "BNI") {
+                pesan += "\n🏦 TRANSFER BANK BNI\nNo Rekening: 1234567890\na/n RISNAWATI\n\nHarap kirim bukti transfer ke admin.";
+            } else if (metodeBayar === "DANA") {
+                pesan += "DANA (082128359084 a/n RISNAWATI)";
+            }
+
+            alert(pesan);
+            
+            // Kosongkan keranjang setelah berhasil checkout
+            cart = [];
+            renderProduk();
         }
 
-        function tutupModal() {
-            document.getElementById('productModal').style.display = 'none';
-        }
-
-        // Jalankan saat web pertama kali dimuat
-        window.onload = function() {
-            renderKatalog(dataProduk);
-        };
+        // Jalankan fungsi saat web pertama kali dibuka
+        window.onload = renderProduk;
     </script>
 </body>
 </html>
